@@ -5,6 +5,7 @@ include(KDE4Defaults)
 
 add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
 include_directories(
+    ${QT_INCLUDES}
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_BINARY_DIR}
     ${KDE_INCLUDES}
