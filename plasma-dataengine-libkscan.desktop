@@ -1,17 +1,17 @@
 [Desktop Entry]
-Name=libkscan
-Comment=Provides access to SANE scanners via libkscan.
-Comment[de]=Stellt SANE Scanner-Funktionen über libkscan bereit.
+Name=libksane
+Comment=Provides access to SANE scanners via libksane.
+Comment[de]=Stellt SANE Scanner-Funktionen über libksane bereit.
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/DataEngine
-X-KDE-Library=plasma_engine_libkscan
-X-Plasma-EngineName=libkscan
+X-KDE-Library=plasma_engine_libksane
+X-Plasma-EngineName=libksane
 X-KDE-PluginInfo-Author=Elias Probst
 X-KDE-PluginInfo-Email=mail@eliasprobst.eu
-X-KDE-PluginInfo-Name=libkscan
+X-KDE-PluginInfo-Name=libksane
 X-KDE-PluginInfo-Version=0.0.1
-X-KDE-PluginInfo-Website=http://eliasprobst.eu/code/plasma-dataengine-libkscan
+X-KDE-PluginInfo-Website=http://eliasprobst.eu/code/plasma-dataengine-libksane
 # TODO: Check, whether "Multimedia" is a correct category and if there's a better matching one
 X-KDE-PluginInfo-Category=Multimedia
 X-KDE-PluginInfo-Depends=
