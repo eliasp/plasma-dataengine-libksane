@@ -46,7 +46,7 @@ bool SaneEngine::updateSourceEvent(const QString &operation)
 {
     QString scannerlist;
 
-    if (operation == I18N_NOOP("listScanners")) {
+    if (operation == I18N_NOOP("Scanners")) {
         return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
     }
 }
