@@ -18,12 +18,6 @@
 
 #include "saneengine.h"
 
-#include <QFooTODO>
-
-#include <KBarTODO>
-
-#include <Plasma/DataContainer>
-
 SaneEngine::SaneEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args)
 {

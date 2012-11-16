@@ -19,7 +19,7 @@
 #ifndef SANEENGINE_H
 #define SANEENGINE_H
 
-#include <Plasma/DataEngine>
+#include <plasma/dataengine.h>
 
 class SaneEngine : public Plasma::DataEngine
 {
