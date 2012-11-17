@@ -3,6 +3,7 @@ Name=libksane
 Comment=Provides access to SANE scanners via libksane.
 Comment[de]=Stellt SANE Scanner-Funktionen über libksane bereit.
 Type=Service
+Icon=scanner
 
 X-KDE-ServiceTypes=Plasma/DataEngine
 X-KDE-Library=plasma_engine_libksane
