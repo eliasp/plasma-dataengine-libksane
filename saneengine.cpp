@@ -42,14 +42,14 @@ QStringList SaneEngine::sources() const
     return QStringList() << "Scanners";
 }
 
-QStringList SaneEngine::updateSourceEvent(const QString &operation)
-{
-    QString scannerlist;
-
-    if (operation == I18N_NOOP("Scanners")) {
-        return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
-    }
-}
+//QStringList SaneEngine::updateSourceEvent(const QString &operation)
+//{
+//    QString scannerlist;
+//
+//    if (operation == I18N_NOOP("Scanners")) {
+//        return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
+//    }
+//}
 
 K_EXPORT_PLASMA_DATAENGINE(libksane, SaneEngine)
 
