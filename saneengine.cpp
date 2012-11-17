@@ -18,6 +18,19 @@
 
 #include "saneengine.h"
 
+void SaneEngine::init() {
+    setData(
+        QLatin1String("Scanners"),
+        QLatin1String("default"),
+        QLatin1String("default SANE scanner")
+    );
+    setData(
+        QLatin1String("Scanners"),
+        QLatin1String("net:homeserver:genesys:libusb:001:007"),
+        QLatin1String("Canon LiDE 210")
+    );
+};
+
 SaneEngine::SaneEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args)
 {

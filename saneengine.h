@@ -35,6 +35,8 @@ class SaneEngine : public Plasma::DataEngine
         virtual QStringList sources() const;
 
     protected:
+        void init();
+
         // this virtual function is called when a new source is requested
         bool sourceRequestEvent(const QString &name);
 
