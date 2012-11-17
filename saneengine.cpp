@@ -49,6 +49,10 @@ bool SaneEngine::sourceRequestEvent(const QString &name)
     // requested, so we just call updateSourceEvent().
     //return updateSourceEvent(name);
 
+    if (name) {
+        return true;
+    }
+
     return true;
 }
 
