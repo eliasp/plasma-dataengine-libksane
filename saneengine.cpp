@@ -50,3 +50,7 @@ QStringList SaneEngine::updateSourceEvent(const QString &operation)
         return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
     }
 }
+
+K_EXPORT_PLASMA_DATAENGINE(libksane, SaneEngine)
+
+#include "saneengine.moc"
