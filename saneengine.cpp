@@ -47,13 +47,7 @@ bool SaneEngine::sourceRequestEvent(const QString &name)
 {
     // We don't have any special code to execute the first time a source is
     // requested, so we just call updateSourceEvent().
-    //return updateSourceEvent(name);
-
-    if (name) {
-        return true;
-    }
-
-    return true;
+    return updateSourceEvent(name);
 }
 
 QStringList SaneEngine::sources() const
@@ -66,7 +60,8 @@ bool SaneEngine::updateSourceEvent(const QString &operation)
     //QString scannerlist;
 
     if (operation == I18N_NOOP("Scanners")) {
-        return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
+        //return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
+        return true;
     }
 }
 
