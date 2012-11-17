@@ -36,12 +36,12 @@ class SaneEngine : public Plasma::DataEngine
 
     protected:
         // this virtual function is called when a new source is requested
-        QStringList sourceRequestEvent(const QString& name);
+        virtual QStringList sourceRequestEvent(const QString& name);
 
         // this virtual function is called when an automatic update is
         // triggered for an existing source (ie: when a valid update
         // interval is set when requesting a source)
-        QStringList updateSourceEvent(const QString& source);
+        virtual QStringList updateSourceEvent(const QString& source);
 };
 
 #endif // SANEENGINE_H
