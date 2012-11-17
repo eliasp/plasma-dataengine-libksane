@@ -30,12 +30,12 @@ class SaneEngine : public Plasma::DataEngine
         // every engine needs a constructor with these arguments
         SaneEngine(QObject* parent, const QVariantList& args);
 
+        // lists the datasources provided by this data engine
+        QStringList sources() const;
+
     protected:
         // this virtual function is called when a new source is requested
         bool sourceRequestEvent(const QString& name);
-
-        // lists the datasources provided by this data engine
-        QStringList sources();
 
         // this virtual function is called when an automatic update is
         // triggered for an existing source (ie: when a valid update
