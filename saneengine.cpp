@@ -43,16 +43,17 @@ SaneEngine::SaneEngine(QObject* parent, const QVariantList& args)
     setMinimumPollingInterval(500);
 };
 
+QStringList SaneEngine::sources() const
+{
+    return QStringList() << "Scanners";
+}
+
+
 bool SaneEngine::sourceRequestEvent(const QString &name)
 {
     // We don't have any special code to execute the first time a source is
     // requested, so we just call updateSourceEvent().
     return updateSourceEvent(name);
-}
-
-QStringList SaneEngine::sources() const
-{
-    return QStringList() << "Scanners";
 }
 
 bool SaneEngine::updateSourceEvent(const QString &operation)
@@ -61,6 +62,9 @@ bool SaneEngine::updateSourceEvent(const QString &operation)
 
     if (operation == I18N_NOOP("Scanners")) {
         //return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
+        return true;
+    }
+    else {
         return true;
     }
 }
