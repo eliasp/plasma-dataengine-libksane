@@ -18,6 +18,8 @@
 
 #include "saneengine.h"
 
+#include <libksane/ksane.h>
+
 void SaneEngine::init() {
     setData(
         QLatin1String("Scanners"),
@@ -61,6 +63,13 @@ bool SaneEngine::updateSourceEvent(const QString &operation)
     //QString scannerlist;
 
     if (operation == I18N_NOOP("Scanners")) {
+
+        // reset the list of scanners
+        removeAllData(QLatin1String("Scanners"));
+
+        // get all available scanners from libksane
+        const m_deviceList = new QList(<KSaneWidget::DeviceInfo>);
+
         //return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
         return true;
     }
