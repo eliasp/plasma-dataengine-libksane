@@ -42,3 +42,5 @@ class SaneEngine : public Plasma::DataEngine
         // interval is set when requesting a source)
         QStringList updateSourceEvent(const QString& source);
 };
+
+#endif // SANEENGINE_H
