@@ -57,7 +57,7 @@ QStringList SaneEngine::sources() const
     return QStringList() << "Scanners";
 }
 
-QStringList SaneEngine::updateSourceEvent(const QString &operation)
+bool SaneEngine::updateSourceEvent(const QString &operation)
 {
     //QString scannerlist;
 
