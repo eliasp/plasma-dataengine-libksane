@@ -26,6 +26,6 @@ install(
 )
 
 install(
-    FILES plasma-engine-libksane.desktop
+    FILES plasma-dataengine-libksane.desktop
     DESTINATION ${SERVICES_INSTALL_DIR}
 )
