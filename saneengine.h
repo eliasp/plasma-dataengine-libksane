@@ -44,3 +44,4 @@ class SaneEngine : public Plasma::DataEngine
 };
 
 #endif // SANEENGINE_H
+
