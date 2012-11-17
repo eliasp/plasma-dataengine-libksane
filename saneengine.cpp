@@ -16,6 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <QList>
 #include "saneengine.h"
 
 #include <libksane/ksane.h>
@@ -68,7 +69,8 @@ bool SaneEngine::updateSourceEvent(const QString &operation)
         removeAllData(QLatin1String("Scanners"));
 
         // get all available scanners from libksane
-        deviceList = new QList(<KSaneWidget::DeviceInfo>);
+        //QList deviceList = new QList(<KSaneWidget::DeviceInfo>);
+        QList<KSaneWidget::DeviceInfo> deviceList;
 
         //return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
         return true;
