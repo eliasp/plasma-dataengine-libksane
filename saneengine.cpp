@@ -30,12 +30,14 @@ SaneEngine::SaneEngine(QObject* parent, const QVariantList& args)
     setMinimumPollingInterval(500);
 };
 
-//QStringList SaneEngine::sourceRequestEvent(const QString &name)
-//{
-//    // We don't have any special code to execute the first time a source is
-//    // requested, so we just call updateSourceEvent().
-//    return updateSourceEvent(name);
-//}
+bool SaneEngine::sourceRequestEvent(const QString &name)
+{
+    // We don't have any special code to execute the first time a source is
+    // requested, so we just call updateSourceEvent().
+    //return updateSourceEvent(name);
+
+    return true;
+}
 
 QStringList SaneEngine::sources() const
 {
