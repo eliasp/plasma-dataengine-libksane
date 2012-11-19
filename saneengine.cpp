@@ -23,16 +23,27 @@
 #include <libksane/ksane.h>
 
 void SaneEngine::init() {
-    setData(
-        QLatin1String("Scanners"),
-        QLatin1String("default"),
-        QLatin1String("default SANE scanner")
-    );
-    setData(
-        QLatin1String("Scanners"),
-        QLatin1String("net:homeserver:genesys:libusb:001:007"),
-        QLatin1String("Canon LiDE 210")
-    );
+    //setData(
+    //    QLatin1String("Scanners"),
+    //    QLatin1String("default"),
+    //    QLatin1String("default SANE scanner")
+    //);
+    //setData(
+    //    QLatin1String("Scanners"),
+    //    QLatin1String("net:homeserver:genesys:libusb:001:007"),
+    //    QLatin1String("Canon LiDE 210")
+    //);
+    // get all available scanners from libksane
+    QList<KSaneIface::KSaneWidget::DeviceInfo> deviceList;
+
+    for (int i=0; i<deviceList.size(); i++) {
+        kDebug() << "name: " << deviceList[i].name;
+        setData(
+                QLatin1String("Scanners"),
+                QLatin1String(deviceList[i].name),
+                QLatin1String(deviceList[i].vendor)
+        );
+    }
 };
 
 SaneEngine::SaneEngine(QObject* parent, const QVariantList& args)
