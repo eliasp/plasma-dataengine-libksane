@@ -70,7 +70,11 @@ bool SaneEngine::updateSourceEvent(const QString &operation)
 
         // get all available scanners from libksane
         QList<KSaneIface::KSaneWidget::DeviceInfo> deviceList;
-        kDebug() << "deviceList: " << deviceList;
+        foreach ( device, deviceList )
+        {
+            kDebug() << "device: " << device;
+        }
+        //kDebug() << "deviceList: " << deviceList;
         //Q_FOREACH ( const 
 
         //return QStringList() << "default" << "Epson LIDA 210" << "SANE dummy";
