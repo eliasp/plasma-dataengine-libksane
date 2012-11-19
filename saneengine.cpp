@@ -40,8 +40,8 @@ void SaneEngine::init() {
         kDebug() << "name: " << deviceList[i].name;
         setData(
                 QLatin1String("Scanners"),
-                QLatin1String(deviceList[i].name),
-                QLatin1String(deviceList[i].vendor)
+                deviceList[i].name,
+                deviceList[i].vendor
         );
     }
 };
