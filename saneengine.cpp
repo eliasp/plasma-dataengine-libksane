@@ -71,16 +71,9 @@ bool SaneEngine::updateSourceEvent(const QString &operation)
 
         // get all available scanners from libksane
         QList<KSaneIface::KSaneWidget::DeviceInfo> deviceList;
-        QMap<QString, QString> device;
         foreach ( device, deviceList )
         {
-            QMapIterator<QString, int> deviceIterator(device);
-            while (deviceIterator.hasNext())
-            {
-                deviceIterator.next();
-                kDebug() << deviceIterator.key() << ": " << deviceIterator.value() << endl;
-            }
-            //kDebug() << "device: " << device;
+            kDebug() << "name: " << device.name;
         }
         //kDebug() << "deviceList: " << deviceList;
         //Q_FOREACH ( const 
