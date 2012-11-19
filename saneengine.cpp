@@ -17,6 +17,7 @@
  */
 
 #include <QList>
+#include <QMap>
 #include "saneengine.h"
 
 #include <libksane/ksane.h>
